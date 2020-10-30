@@ -7,7 +7,7 @@
 #This notebook is for training purposes
 
 
-# In[2]:
+# In[1]:
 
 
 #Branching
@@ -21,7 +21,7 @@ else :
     print("DENIED")
 
 
-# In[3]:
+# In[2]:
 
 
 #Loops
@@ -30,7 +30,7 @@ for i in range(0,23):
     print(i, end = " ")
 
 
-# In[4]:
+# In[3]:
 
 
 numbers = [1, 0, 3, 4, 5]
@@ -39,7 +39,7 @@ for i, numbers in enumerate(numbers):
     print(i, numbers)
 
 
-# In[5]:
+# In[4]:
 
 
 numbers = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
@@ -56,6 +56,14 @@ while(list1 != 7) :
 # In[7]:
 
 
+for index, number in enumerate(numbers):
+    print("The index (" + str(index) + ") does not correpond to the number in the list (" + str(number) + ")")
+    #str(index +1) if we want to start from 0
+
+
+# In[5]:
+
+
 colors = ['blue', 'cyan', 'purple', 'red', 'yellow', 'orange']
 i = 0
 not_red = []
@@ -68,7 +76,31 @@ while(not_red != 'red'):
 print(i, 'iterations to get red into not_red')
 
 
-# In[8]:
+# In[6]:
+
+
+#Loop with a sublist
+Diff_levels = [["I want to live", 1],
+              ["Hurt me plenty", 2],
+              ["Ultra-violence", 3],
+              ["Nightmare", 4],
+              ["Ultra-nightmare", 5]]
+
+for x in Diff_levels :
+    print("Number " + str(x[1]) + " corresponds to " + x[0] + " difficulty in Doom Eternal")
+
+
+# In[9]:
+
+
+Dictionnary = {"Watch Dogs Legion": "October",
+              "Assassin's Creed Valhalla": "November",
+              "Cyberpunk 2077": "December (or not)"}
+for key, value in Dictionnary.items(): #For dictionnaries, the method items() is used
+    print(key + " releases in " + value)
+
+
+# In[7]:
 
 
 #Functions
@@ -83,7 +115,7 @@ def adding(a,b):
 adding(3,22)
 
 
-# In[9]:
+# In[8]:
 
 
 def happymeal(a):
@@ -103,7 +135,7 @@ print(happymeal(13))
 print(not_influenced)
 
 
-# In[10]:
+# In[9]:
 
 
 def Organizer(**arguments):
@@ -113,7 +145,7 @@ def Organizer(**arguments):
 Organizer(Sony = "Playstation", Microsoft = "Xbox", Nintendo = "Switch")
 
 
-# In[11]:
+# In[10]:
 
 
 #Classes & Methods
@@ -140,7 +172,7 @@ my_car = Car(make, model, color)
 my_car.info()
 
 
-# In[12]:
+# In[11]:
 
 
 my_car2 = Car(color = "Black", make = "Audi", model = "A6") #the order is not important if you assign each attribute
